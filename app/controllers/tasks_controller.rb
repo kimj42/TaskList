@@ -9,7 +9,8 @@ class TasksController < ApplicationController
     @tasks = TASKS
   end
 
-  def show(id)
-    @task = TASKS[]
+  def show
+    task_id = params[:id]
+    @task = TASKS[task_id]
   end
 end
