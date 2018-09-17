@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+<body>
+  <ul class="task-list">
+    <% @tasks.each do |task| %>
+    <li><%= task[:title] %></li>
+    <% end %>
+  </ul>
+</body>
+</html>
