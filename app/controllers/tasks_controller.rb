@@ -8,4 +8,8 @@ class TasksController < ApplicationController
   def index
     @tasks = TASKS
   end
+
+  def show(id)
+    @task = TASKS[]
+  end
 end
