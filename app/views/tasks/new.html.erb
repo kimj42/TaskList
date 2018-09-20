@@ -1,4 +1,4 @@
-<%= form_with model: @task do |f| %>
+<%= form_with model: @task, url: tasks_path, method: :post  do |f| %>
 
   <h2>New Task Form</h2>
 

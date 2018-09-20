@@ -2194,3 +2194,154 @@ Processing by TasksController#show as HTML
 Completed 200 OK in 47ms (Views: 39.3ms | ActiveRecord: 0.7ms)
 
 
+Started GET "/tasks" for 127.0.0.1 at 2018-09-20 15:56:01 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.7ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/views/tasks/index.html.erb:3
+  Rendered tasks/index.html.erb within layouts/application (519.2ms)
+Completed 500 Internal Server Error in 557ms (ActiveRecord: 0.7ms)
+
+
+
+NameError - undefined local variable or method `books_path' for #<#<Class:0x00007fe53a3d6f90>:0x00007fe53717d558>:
+  app/views/tasks/index.html.erb:12:in `_app_views_tasks_index_html_erb__3140467752276878650_70311224277820'
+
+Started POST "/__better_errors/64dd7ac9763b8acc/variables" for 127.0.0.1 at 2018-09-20 15:56:02 -0700
+Started GET "/tasks" for 127.0.0.1 at 2018-09-20 15:56:16 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/views/tasks/index.html.erb:3
+  Rendered tasks/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 46ms (Views: 41.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-09-20 15:56:18 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/views/tasks/index.html.erb:3
+  Rendered tasks/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 26ms (Views: 23.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-09-20 15:56:19 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/views/tasks/index.html.erb:3
+  Rendered tasks/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 24ms (Views: 20.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-09-20 15:57:26 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/views/tasks/index.html.erb:3
+  Rendered tasks/index.html.erb within layouts/application (516.0ms)
+Completed 500 Internal Server Error in 525ms (ActiveRecord: 0.6ms)
+
+
+
+NameError - undefined local variable or method `new_book_path' for #<#<Class:0x00007fe53a3d6f90>:0x00007fe5344b7cd0>
+Did you mean?  new_task_path:
+  app/views/tasks/index.html.erb:12:in `_app_views_tasks_index_html_erb__3140467752276878650_70311200814520'
+
+Started POST "/__better_errors/a244ba4a3980e775/variables" for 127.0.0.1 at 2018-09-20 15:57:26 -0700
+Started GET "/tasks" for 127.0.0.1 at 2018-09-20 15:57:37 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/views/tasks/index.html.erb:3
+  Rendered tasks/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 43ms (Views: 40.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2018-09-20 15:57:39 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 34ms (Views: 30.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2018-09-20 15:58:44 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 64ms (Views: 57.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2018-09-20 15:58:47 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 37ms (Views: 30.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2018-09-20 16:02:05 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 56ms (Views: 50.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2018-09-20 16:04:57 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 42ms (Views: 36.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2018-09-20 16:17:43 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (629.7ms)
+Completed 500 Internal Server Error in 649ms (ActiveRecord: 0.0ms)
+
+
+
+NameError - undefined local variable or method `books_path' for #<#<Class:0x00007fe53a3d6f90>:0x00007fe53a35fa08>:
+  app/views/tasks/new.html.erb:1:in `_app_views_tasks_new_html_erb___2211773044524939450_70311250428500'
+
+Started POST "/__better_errors/e2f5fb9bca55723e/variables" for 127.0.0.1 at 2018-09-20 16:17:44 -0700
+Started GET "/tasks/new" for 127.0.0.1 at 2018-09-20 16:17:57 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 40ms (Views: 37.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tasks" for 127.0.0.1 at 2018-09-20 16:18:18 -0700
+Processing by TasksController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EzqI+mZ2jESiwT/b8jo9A1oMjQB+S+Y+HavvXCD907xVrXgR3EjpjykDU4pV640bCf7lOU958mwiTQSJ8/WEeg==", "task"=>{"action"=>"another test", "description"=>"check if goes to index page", "completion_date"=>"2020-10-22"}, "commit"=>"Create New Task"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tasks_controller.rb:25
+  [1m[36mTask Create (1.7ms)[0m  [1m[32mINSERT INTO "tasks" ("action", "description", "created_at", "updated_at", "completion_date") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["action", "another test"], ["description", "check if goes to index page"], ["created_at", "2018-09-20 23:18:18.842770"], ["updated_at", "2018-09-20 23:18:18.842770"], ["completion_date", "2020-10-22"]]
+  ↳ app/controllers/tasks_controller.rb:25
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tasks_controller.rb:25
+Redirected to http://localhost:3000/tasks
+Completed 200 OK in 9ms (ActiveRecord: 3.2ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-09-20 16:18:18 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (1.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/views/tasks/index.html.erb:3
+  Rendered tasks/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 38ms (Views: 33.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/tasks/6" for 127.0.0.1 at 2018-09-20 16:18:20 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:8
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 36ms (Views: 29.0ms | ActiveRecord: 0.8ms)
+
+
