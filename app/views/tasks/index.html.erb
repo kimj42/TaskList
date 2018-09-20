@@ -1,6 +1,12 @@
 <h2>Tasks</h2>
-<ul class="task-list">
+<ul>
   <% @tasks.each do |task| %>
-  <li><%= task[:task] %></li>
+  <li>
+    <strong>
+    Name: <%= task.action.capitalize %>,
+    </strong>
+    description: <%= task.description %>,
+    completion_date: <%= task.completion_date %>
+  </li>
   <% end %>
 </ul>
