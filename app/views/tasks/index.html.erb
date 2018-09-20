@@ -3,10 +3,9 @@
   <% @tasks.each do |task| %>
   <li>
     <strong>
-    Name: <%= task.action.capitalize %>,
+    Action: <%= task.action.capitalize %>
     </strong>
-    description: <%= task.description %>,
-    completion_date: <%= task.completion_date %>
+    <%= link_to "View details", task_path(task.id) %>
   </li>
   <% end %>
 </ul>
