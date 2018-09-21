@@ -4,7 +4,7 @@ class TasksController < ApplicationController
   end
 
   def show
-    task_id = params[:id].to_i
+    task_id = params[:id]
     @task = Task.find_by(id: task_id)
     if @task.nil?
       head :not_found
@@ -19,7 +19,7 @@ class TasksController < ApplicationController
     task = Task.new(
       action: params[:task][:action],
       description: params[:task][:description],
-      completion_date: Date.parse(params[:task][:completion_date])
+      completion_date: params[:task][:completion_date]
     )
 
     is_successful_save = task.save
@@ -32,11 +32,27 @@ class TasksController < ApplicationController
   end
 
   def edit
-    @task = Task.find(params[:id])
+    task_id = params[:id]
+    @task = Task.find_by(id: task_id)
   end
 
   def update
+    task_id = params[:id]
+    @task = Task.find_by(id: task_id)
+    @task.update(
+      action: params[:task][:action],
+      description: params[:task][:description],
+      completion_date: params[:task][:completion_date]
+    )
+    redirect_to task_path(@task)
+  end
 
+  def destroy
+    task_id = params[:id]
+    @task = Task.find_by(id: task_id)
+
+    @task.destroy
+    redirect_to tasks_path
   end
 
 end

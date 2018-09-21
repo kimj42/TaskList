@@ -6,8 +6,10 @@
     Action: <%= task.action.capitalize %>
     </strong>
     <%= link_to "View details", task_path(task.id) %>
+    <%= link_to "Delete", task_path(task.id), method: :delete, data: { confirm: "You sure?" }%>
   </li>
   <% end %>
 
   <%= link_to "Add new book", new_task_path %>
+
 </ul>
