@@ -16,3 +16,7 @@
 .line {
   display: inline-flex;
 }
+
+.strike {
+  text-decoration: line-through;
+}

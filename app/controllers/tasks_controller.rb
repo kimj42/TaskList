@@ -59,8 +59,8 @@ class TasksController < ApplicationController
   def complete
     task_id = params[:id]
     @task = Task.find_by(id: task_id)
-    @task.update(completion_date: DateTime.now.strftime("%d/%m/%Y"))
-      
+    @task.update(completion_date: DateTime.now.strftime("%Y-%m-%d"))
+
     redirect_to tasks_path
   end
 end

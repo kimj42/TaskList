@@ -1,13 +1,23 @@
 <h2>Tasks</h2>
 <ul >
   <% @tasks.each do |task| %>
-  <li >
-    <strong>
-      Action: <%= task.action.capitalize %>
-    </strong>
+  <li>
+
     <section class="line">
+
+      <% if task.completion_date.to_s <= DateTime.now.strftime("%Y-%m-%d")%>
+        <div class="strike"><strong>
+          Action: <%= task.action.capitalize %>
+        </strong> </div>
+        <%= button_to "(Unmark complete)", complete_task_path(task.id), method: :patch %>
+      <% else %>
+        <strong>
+          Action: <%= task.action.capitalize %>
+        </strong>
+        <%= button_to "(Mark complete)", complete_task_path(task.id), method: :patch %>
+      <% end %>
+
       <%= link_to "(View details)", task_path(task.id) %>
-      <%= button_to "(Mark complete)", complete_task_path(task.id), method: :patch%>
       <%= link_to "(Delete)", task_path(task.id), method: :delete, data: { confirm: "You sure?" }%>
     </section>
   </li>
