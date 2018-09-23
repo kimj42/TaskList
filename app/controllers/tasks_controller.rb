@@ -44,7 +44,8 @@ class TasksController < ApplicationController
       description: params[:task][:description],
       completion_date: params[:task][:completion_date]
     )
-    redirect_to task_path(@task)
+
+    redirect_to task_path(@task.id)
   end
 
   def destroy
@@ -55,4 +56,11 @@ class TasksController < ApplicationController
     redirect_to tasks_path
   end
 
+  def complete
+    task_id = params[:id]
+    @task = Task.find_by(id: task_id)
+    @task.update(completion_date: DateTime.now.strftime("%d/%m/%Y"))
+      
+    redirect_to tasks_path
+  end
 end

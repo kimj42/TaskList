@@ -13,5 +13,5 @@
   <strong>Completion date:</strong>
   <%= @task.completion_date %>
 </p>
-<%= link_to "Edit #{@task.action}", edit_task_path(@task.id) %>
-<%= link_to "Go Back to All Tasks", tasks_path %>
+<%= link_to "(Edit #{@task.action})", edit_task_path(@task.id) %>
+<%= link_to "(Go Back to All Tasks)", tasks_path %>

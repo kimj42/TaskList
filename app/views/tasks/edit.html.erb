@@ -1,6 +1,6 @@
 <%= form_with model: @task, url: task_path(@task.id), method: :patch  do |f| %>
 
-  <h2>New Task Form</h2>
+  <h2>Edit Task Form</h2>
 
   <%= f.label :action %>
   <%= f.text_field :action %>
@@ -11,5 +11,5 @@
   <%= f.label :completion_date %>
   <%= f.date_field :completion_date %>
 
-  <%= f.submit "Create New Task" %>
+  <%= f.submit "Submit edit" %>
 <% end %>

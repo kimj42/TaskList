@@ -1,15 +1,21 @@
 <h2>Tasks</h2>
-<ul>
+<ul >
   <% @tasks.each do |task| %>
-  <li>
+  <li >
     <strong>
-    Action: <%= task.action.capitalize %>
+      Action: <%= task.action.capitalize %>
     </strong>
-    <%= link_to "View details", task_path(task.id) %>
-    <%= link_to "Delete", task_path(task.id), method: :delete, data: { confirm: "You sure?" }%>
+    <section class="line">
+      <%= link_to "(View details)", task_path(task.id) %>
+      <%= button_to "(Mark complete)", complete_task_path(task.id), method: :patch%>
+      <%= link_to "(Delete)", task_path(task.id), method: :delete, data: { confirm: "You sure?" }%>
+    </section>
   </li>
   <% end %>
 
-  <%= link_to "Add new book", new_task_path %>
+  <div>
+    <%= link_to "(Add new book)", new_task_path %>
+  </div>
+
 
 </ul>
