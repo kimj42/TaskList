@@ -16,11 +16,9 @@ class TasksController < ApplicationController
   end
 
   def create
-    task = Task.new(
-      action: params[:task][:action],
-      description: params[:task][:description],
-      completion_date: params[:task][:completion_date]
-    )
+    filtered_task_params = task_params()
+    task = Task.new(filtered_task_params)
+
 
     is_successful_save = task.save
 
@@ -39,11 +37,7 @@ class TasksController < ApplicationController
   def update
     task_id = params[:id]
     @task = Task.find_by(id: task_id)
-    @task.update(
-      action: params[:task][:action],
-      description: params[:task][:description],
-      completion_date: params[:task][:completion_date]
-    )
+    @task.update(task_params)
 
     redirect_to task_path(@task.id)
   end
@@ -62,5 +56,15 @@ class TasksController < ApplicationController
     @task.update(completion_date: DateTime.now.strftime("%Y-%m-%d"))
 
     redirect_to tasks_path
+  end
+
+  private
+
+  def task_params
+    return params.require(:task).permit(
+      :action,
+      :description,
+      :completion_date
+    )
   end
 end
